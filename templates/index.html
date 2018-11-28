@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!-- TODO Include link to paper and link to personal page/github on a navbar or footer -->
+    <div class="container">
+
+      <h1 class="display-4 text-center p-4">Coreference Resolution Demo</h1>
+      <div class="row justify-content-between">
+
+        <!-- User Input -->
+        <div class="col-8 pr-5">
+          <form id="doc-form">
+            <div class="form-group">
+              <label for="documentInput">Document input</label>
+              <textarea class="form-control" id="documentInput" rows="5"></textarea>
+            </div>
+            
+            <div class="py-2">
+              <input type="checkbox" id="automaticMentionDetection">
+              <label>
+                Detect mentions automatically
+              </label>
+            </div>
+
+            <div class="border border-light bg-light rounded text-secondary mb-3">
+              <div class="p-2">
+                <p class="mb-0"><em>Hint:</em></p>
+                <p class="mb-0">Manually delimit mentions with "&#91;...&#93;" characters for more accurate coreference clusters. Don't forget to uncheck the radio button.</p>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <div class="form-group">
+                <label for="modelSelection">Model</label>
+                <select class="form-control" id="modelSelection">
+                    <option value="pt">Portuguese</option>
+                    <option value="es">Spanish</option>
+                    <option value="pt-transfer">Portuguese (direct transfer from Spanish)</option>
+                </select>
+              </div>
+    
+              <button type="submit" class="btn btn-primary my-4">Submit</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Action Output -->
+        <div class="col-4">
+          <div class="mb-3">
+            <label>Mentions</label>
+            <textarea disabled class="form-control" id="mentions" rows="8"></textarea>
+          </div>
+
+          <div>
+            <label>Coreference Clusters</label>
+            <textarea disabled class="form-control" id="clusters" rows="10"></textarea>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
