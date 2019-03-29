@@ -28,6 +28,14 @@ CFLAGS="-I/usr/local/opt/icu4c/include -std=c++11" LDFLAGS=-L/usr/local/opt/icu4
 pip install -r requirements.txt
 ```
 
+### Running
+Starting the backend server:
+```
+python application.py
+```
+
+Then navigate to ```127.0.0.1:5000```
+
 ## Citation
 
 This repository contains code used for the following publication ([link](https://ieeexplore.ieee.org/abstract/document/8554705)):
@@ -37,12 +45,9 @@ This repository contains code used for the following publication ([link](https:/
     booktitle={2018 Fifth International Conference on Social Networks Analysis, Management and Security (SNAMS)},
     title={Exploring Spanish Corpora for Portuguese Coreference Resolution},
     year={2018},
-    volume={},
-    number={},
     pages={290-295},
     keywords={Task analysis;Training;Natural language processing;Measurement;Social network services;Security;Feature extraction},
     doi={10.1109/SNAMS.2018.8554705},
-    ISSN={},
     month={Oct},
 }
 ```
